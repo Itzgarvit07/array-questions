@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="enter a name" id="newss">
+        <button id="buttonselect">add name to array</button>
+        <button id="buttonselector">print</button>
+        <p></p>
+       </div> 
+</body>
+<script>
+const names = [];
+
+const input = document.querySelector("input");
+const add = document.querySelector("#buttonselect");
+const made = document.querySelector("#buttonselector");
+const para = document.querySelector("p");
+
+add.onclick = () => {
+  names.push(input.value);
+  console.log(names);
+};
+
+made.onclick = () => {
+  var good = [];
+  var bounty = 0; 
+
+  var men = setInterval(() => {
+    if (bounty < names.length) {
+      var river = "";
+      for (var j = 0; j < names[bounty].length; j++) {
+        river += names[bounty][j];
+      }
+
+      good.push(river);
+      para.innerHTML = good.join(', '); 
+      bounty++;
+    } else {
+      clearInterval(men); 
+    }
+  }, 1000);
+};
+
+
+
+</script>
+
+
+</html>
