@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="enter a number" id="newss">
+        <button id="buttonselect">add name to array</button>
+        <button id="buttonselector">print in reverse</button>
+        <p></p>
+       </div> 
+</body>
+
+
+<script>
+  const numbers = [];
+
+const input=document.querySelector("input")
+const add=document.querySelector("#buttonselect")
+const made=document.querySelector("#buttonselector")
+const para=document.querySelector("p")
+
+add.onclick=function()
+{
+
+console.log()
+}
+
+add.onclick=() =>
+{
+numbers.push(input.value)
+console.log(numbers)
+}
+made.onclick=() =>
+{
+    var out=[];
+   for(var i=numbers.length-1;i>=0;i--)
+   {
+    out.push(numbers[i]);
+   }
+    para.innerHTML=out
+}
+
+
+
+
+
+</script>
+</html>
