@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="enter a name" id="newss">
+        <button id="buttonselect">add name to array</button>
+        <button id="buttonselector">print</button>
+        <p></p>
+       </div> 
+
+
+
+    <script>
+const names = [];
+
+const input=document.querySelector("input")
+const add=document.querySelector("#buttonselect")
+const made=document.querySelector("#buttonselector")
+const para=document.querySelector("p")
+
+add.onclick=() =>
+{
+names.push(input.value)
+console.log(names)
+}
+made.onclick=() =>
+{
+    var out=[];
+    for (var i = 0; i <names.length; i++)
+   {
+var reverse=""
+    for(var j=0;j<names[i].length; j++)
+    {
+reverse+=names[i][j];
+    }
+
+out.push(reverse);
+para.innerHTML=out;
+   }
+}
+    </script>
+</body>
+</html>
